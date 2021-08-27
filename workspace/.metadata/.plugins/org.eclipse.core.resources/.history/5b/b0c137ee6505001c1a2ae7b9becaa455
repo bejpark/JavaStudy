@@ -1,0 +1,17 @@
+package ex03.IF;
+
+public class MainEntry {
+
+	public static void main(String[] args) {
+		int num1 = 12;
+		int num2 = 24;
+		if(num1>num2)
+			System.out.println("num1="+num1);
+		else
+			System.out.println("num"+num2);
+		
+		System.out.println("done");
+
+	}
+
+}

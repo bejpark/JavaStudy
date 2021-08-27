@@ -1,0 +1,12 @@
+package quiz;
+
+public class Quiz_1 {
+	int pay = 567890;
+	int man = pay/10000;
+	int chun = (pay-man*10000)/1000;
+	int baek = (pay-man*1000-chun*1000)/100;
+	int ten = (pay-man*1000-chun*1000-baek*100)/10;
+	
+	System.out.println(man,chun,baek,ten);
+			
+}

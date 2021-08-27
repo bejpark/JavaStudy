@@ -1,0 +1,11 @@
+package quiz;
+
+public class MainEntry {
+
+	//성적처리 프로그램//7명의 데이터 3과목 입력받아 총점/평균/학점까지 구하는 프로그램 (배열로 처리)
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

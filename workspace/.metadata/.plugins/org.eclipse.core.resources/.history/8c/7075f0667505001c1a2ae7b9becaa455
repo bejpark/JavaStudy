@@ -1,0 +1,26 @@
+package ex04.exception;
+
+import java.util.Scanner;
+
+public class MainEntry {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+		System.out.print("x,y integer data input: ");
+
+		int x, y, result = 0;
+		x = new Scanner(System.in).nextInt();
+		y = new Scanner(System.in).nextInt();
+		result = x / y;
+		System.out.println(result); //ctrl+shift+f 자동정렬 
+		}catch(ArithmeticException e) {
+			System.out.println("ArithmeticException");
+		}catch(Exception e) {
+			System.out.println("Exception");
+			e.printStackTrace();
+		}
+		
+	}
+
+}
