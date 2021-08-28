@@ -1,0 +1,10 @@
+package quiz;
+
+public class Quiz09 {
+//loopline(){ 6번 출력하는 함수}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

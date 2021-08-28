@@ -1,0 +1,10 @@
+package quiz;
+
+public class Quiz07 {
+//max() 두 정수 입력받아 큰수 리턴 함수 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

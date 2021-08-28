@@ -1,0 +1,11 @@
+package quiz;
+
+public class Quiz03 {
+ // int[] a = {7,5,7,8,2,7,3,7,7,90}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+
+}
