@@ -21,6 +21,8 @@ public class VectorEx01 {
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
+	
+		System.out.println("지운후");
 		
 		//get
 		for(int i=0;i<v2.size();i++) {
