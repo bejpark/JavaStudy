@@ -53,9 +53,6 @@ public class VectorEx02 {
 		System.out.println(v);
 		System.out.println(v.size()+", "+v.capacity());
 
-
-
-
 		
 	}//main
 
