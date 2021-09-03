@@ -5429,3 +5429,15 @@ Binding(ALT+SHIFT+D R,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-03 12:06:11.118
 !MESSAGE executing callback sts4.classpath.LSxYErvq SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-03 14:31:45.828
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.LSxYErvq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-03 14:31:45.830
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.LSxYErvq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-03 14:31:45.831
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-03 14:31:45.831
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.LSxYErvq => OK
