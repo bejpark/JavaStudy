@@ -15,9 +15,19 @@ input:hover {
 }
 
 .img {
-    border: 5px solid red;
+    border: 4px solid red;
 }
 
 #img_house {
     border: 3px dotted blue;
+}
+
+div span {
+    text-align: center;
+    size: 5;
+}
+
+td {
+    width: 100px;
+    border: 1px solid black;
 }
