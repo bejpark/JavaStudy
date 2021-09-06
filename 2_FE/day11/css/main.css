@@ -13,3 +13,11 @@
 input:hover {
     background-color: royalblue;
 }
+
+.img {
+    border: 5px solid red;
+}
+
+#img_house {
+    border: 3px dotted blue;
+}
