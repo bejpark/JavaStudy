@@ -1,0 +1,30 @@
+body {
+    margin-top: 50px;
+}
+
+table {
+    border: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+caption {
+    font-size: 2ch;
+}
+
+td {
+    width: 200px;
+    position: relative;
+    text-align: left;
+    margin-left: 0;
+}
+
+.rank {
+    text-align: center;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+}
