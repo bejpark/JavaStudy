@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <form action="result.jsp" method="GET">
+            <table>
+                <section>회원 정보 입력</section>
+                <hr>
+                <tr>
+                    <td class="item"><span class="star">*</span>ID</td>
+                    <td><input type="text" id="id" placeholder="ID 입력" required></td>
+                </tr>
+                <tr>
+                    <td class="item"><span class="star">*</span>Password</td>
+                    <td><input type="password" id="pwd" placeholder="Pwd 입력" required></td>
+                </tr>
+                <tr>
+                    <td class="item"><span class="star">*</span>Password 확인</td>
+                    <td><input type="password" id="repwd" placeholder="Pwd 재입력" required></td>
+                </tr>
+                <tr>
+                    <td class="item"><span class="star">*</span>이름</td>
+                    <td><input type="text" id="name" placeholder="이름 입력" required></td>
+                </tr>
+                <tr>
+                    <td class="item"><span class="star">*</span>전화번호</td>
+                    <td>
+                        <select>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="070">070</option>
+                            <option value="060">060</option>
+                            <option value="02">02</option>
+                        </select> &nbsp;-&nbsp;
+                        <input class="tel" type="tel" id="tel_mid" required> &nbsp;-&nbsp;
+                        <input class="tel" type="tel" id="tel_end" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item">직업</td>
+                    <td><select>
+                        <option value="opt1">직업 선택</option>
+                        <option value="opt2">개발자</option>
+                        <option value="opt3">노숙자</option>
+                        <option value="opt4">주부</option>
+                        <option value="opt5">회사원</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="item">성별</td>
+                    <td>
+                        <input type="radio" name="gender" id="M" checked>남자
+                        <input type="radio" name="gender" id="F">여자
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item">취미</td>
+                    <td>
+                        <input type="checkbox" name="hobby" id="hob1">독서
+                        <input type="checkbox" name="hobby" id="hob2">수영
+                        <input type="checkbox" name="hobby" id="hob3">게임
+                        <input type="checkbox" name="hobby" id="hob4">영화감상
+                        <input type="checkbox" name="hobby" id="hob5">음악듣기
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item">자기소개</td>
+                    <td><textarea name="info" id="info" cols="30" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="register">
+                            <input type="submit" value="등록하기">&nbsp;&nbsp;
+                            <input type="reset" value="취소하기">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+section {
+    text-align: center;
+    font-size: 3ch;
+    padding: 10px;
+}
+
+table {
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(210, 224, 252);
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    height: 30px;
+}
+
+.item {
+    text-align: center;
+}
+
+.tel {
+    width: 40px;
+}
+
+.star {
+    color: red;
+}
+
+.register {
+    text-align: center;
+}

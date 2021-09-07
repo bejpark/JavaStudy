@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sub0907.css">
+</head>
+
+<body>
+    <form action="result.jsp" method="GET">
+        이름 : <input type="text" name="name" id="name" placeholder="이름입력" required>
+        <br> 비밀번호 : <input type="password" name="pwd" id="" placeholder="비밀번호입력" required>
+        <br> 이메일 : <input type="email" name="email" id="" placeholder="xxx@xxx.com" required>
+        <br> 범위 : <input type="range" min="0" max="100" value="50"><span>50</span>%
+        <br> 취미 : <input type="checkbox" name="hobby" value="chk1" checked>독서 <input type="checkbox" name="hobby" value="chk2">음악감상 <input type="checkbox" name="hobby" value="chk3">게임 <input type="checkbox" name="hobby" value="chk4">등산
+        <br> 숫자 : <input type="number" max="1000" min="0">
+        <br> 검색 : <input type="search" placeholder="검색어">
+        <br> TEL : <input type="tel" placeholder="phone">
+        <br> Time : <input type="time">
+        <br> date : <input type="date">
+        <br> datetime : <input type="datetime">
+        <br> datetime-local : <input type="datetime-local">
+        <br> 파일 : <input type="file">
+        <br> image : <input type="image" width="300" height="100" src="/images/1.jpeg">
+        <br> <input type="color">
+        <br> <input type="week">
+
+        <br> 성별 :
+        <input type="radio" name="gender" id="F" checked>여자
+        <input type="radio" name="gender" id="M">남자
+        <br> 직업 :
+        <!-- <select size="5" multiple> -->
+        <select>
+            <option value="opt1">선택하세요</option>
+            <option value="opt2">개발자</option>
+            <option value="opt3">노숙자</option>
+            <option value="opt4">주부</option>
+            <option value="opt5">회사원</option>
+        </select>
+        <br><br>
+        <textarea name="info" id="info" cols="30" rows="10">자기소개</textarea>
+        <br>
+        <input type="submit" value="전송">&nbsp;&nbsp;
+        <input type="reset" value="취소">
+    </form>
+</body>
+
+</html>
