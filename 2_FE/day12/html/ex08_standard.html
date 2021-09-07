@@ -18,6 +18,38 @@
             background-color: skyblue;
             text-align: center;
         }
+        
+        table {
+            width: 400px;
+        }
+        
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            font-size: 15pt;
+            font-family: tahoma, 굴림, 돋움, 궁서, verdana;
+        }
+        
+        .myphoto {
+            position: absolute;
+            left: 50px;
+            top: 250px;
+            transform: rotate(30deg);
+        }
+        
+        form {
+            margin: 20px 30px 40px;
+            margin-left: 100px;
+        }
+        
+        ul {
+            margin-top: 400px;
+        }
+        
+        ul li {
+            list-style: none;
+            float: left;
+        }
     </style>
 </head>
 
@@ -26,6 +58,35 @@
         이제 <span class="accent">웹표준</span>의 역할은 아주 <span class="accent">중요</span>합니다.
         <div>div 내부 </div>
     </p>
+
+    <table>
+        <tr>
+            <td>1R1C</td>
+            <td>1R2C</td>
+        </tr>
+        <tr>
+            <td>2R1C</td>
+            <td>2R2C</td>
+        </tr>
+    </table>
+
+    <hr>
+    <img class="myphoto" src="/images/1.jpeg" alt="hero1">
+
+    <form action="" method="GET">
+        <meter value="10" max="100"></meter>10%
+    </form>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <ul>
+        <li><label>10sec left</label></li>
+        <progress value="30" max="100"></progress>
+    </ul>
 </body>
 
 </html>
