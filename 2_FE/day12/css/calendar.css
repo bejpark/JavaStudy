@@ -1,0 +1,97 @@
+body {
+    position: relative;
+}
+
+.header {
+    background-color: rgb(208, 236, 213);
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 450px;
+    font-size: 3ch;
+}
+
+.timetable {
+    position: relative;
+    top: 30px;
+}
+
+.etc {
+    height: 0px;
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.box1 {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(189, 185, 96)
+}
+
+.box2 {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(240, 111, 111);
+}
+
+.calendar {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+th {
+    width: 50px;
+    height: 30px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+td {
+    padding: 3px;
+    text-align: left;
+    border: 1px solid #ccc;
+    height: 50px;
+    width: 50px;
+}
+
+.sunday,
+.holiday {
+    color: red;
+}
+
+.other {
+    color: #888;
+}
+
+.inner {
+    color: rgb(163, 73, 73);
+    margin-top: 15px;
+    font-size: small;
+    text-align: right;
+}
+
+.today {
+    background-color: rgb(189, 185, 96)
+}
+
+.offline {
+    background-color: rgb(240, 111, 111);
+}
+
+.team {
+    width: 450px;
+    text-align: center;
+    margin: 50px auto;
+    font-size: 12px;
+}
+
+caption {
+    padding: 10px;
+    background-color: rgb(208, 236, 213);
+}
