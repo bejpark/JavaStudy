@@ -8,20 +8,33 @@
     <script type="module" defer src="./js/sub.js"></script>
     <script>
         function aa() {
-            let value = document.getElementById('kk');
-            alert();
+            var val2 = 'bjp';
+            document.getElementById('valueinput').innerHTML = val2;
+            let val1 = document.getElementById('kk').value;
+            alert(val1);
             console.log('btn click');
+            document.getElementById('kkk').value = name2 = document.getElementById('kk').value;
+        }
+
+        document.write(
+            '<font color="blue" size="5"> javascript이용한 출력'
+        )
+
+        const hello = function() {
+            alert("hello");
         }
     </script>
 </head>
 
-<body>
+<body onload="hello()">
     <h1>Hello</h1>
     <div class="red" onclick="javascript:alert('hi');">red </div>
     <button onclick="aa();">red</button> 이름
-    <form action="" id="frm1">
-        <input type="text" id="kk" />
-    </form>
+    <div id="valueinput"></div>
+    <input type="text" id="kk" />
+    <input type="text" id="kkk" name="name2">
+    <hr>
+    <p class="strChange"> html 문서 내 기재된 텍스트.</p>
 
 </body>
 

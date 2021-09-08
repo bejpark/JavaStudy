@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            //alert("innerHTML : " + document.body.innerHTML + '\n' +
+            //    "innerText : " + document.body.innerText)
+            let list = '';
+            list += "<ul>";
+            list += "<li>hello</li>";
+            list += "<li>java</li>";
+            //document.body.innerHTML = list;
+        }
+
+        function countIncrease() {
+            let spanObj = document.querySelector('#countSpan');
+            spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
+        }
+
+        document.querySelector('#id')
+        document.querySelector('.className');
+        document.querySelectorAll('.className');
+        document.getElementById('id');
+
+        function clickNumber(data) {
+            let monitor = document.getElementById("monitor");
+            if (data == 'clear') {
+                monitor.value = '';
+            } else if (data != '=') {
+                monitor.value += data;
+            } else {
+                monitor.value = eval(monitor.value);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="monitor"><br>
+    <input type="button" value="1" onclick="clickNumber(this.value)">
+    <input type="button" value="2" onclick="clickNumber(this.value)">
+    <input type="button" value="3" onclick="clickNumber(this.value)">
+    <input type="button" value="+" onclick="clickNumber(this.value)">
+    <input type="button" value="-" onclick="clickNumber(this.value)">
+    <input type="button" value="=" onclick="clickNumber(this.value)">
+    <input type="button" value="clear" onclick="clickNumber(this.value)">
+    <br> Good <br>
+    <h3>축하합니당</h3>
+
+    <span id="countSpan">0</span> 번 클릭 &nbsp;&nbsp;&nbsp;
+    <input type="button" value="클릭" onclick="countIncrease()">
+    <input type="text" name="pwd">
+    <div class="sample"></div>
+    <div class="sample"></div>
+    <div class="sample"></div>
+    <div class="sample"></div>
+    <div class="sample"></div>
+</body>
+
+</html>
