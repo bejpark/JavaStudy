@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 기본</title>
+    <script>
+        //const a = 9;
+        //let은 재정의 불가
+        //var은 중복정의 가능
+        let fruits = ['Apple', 'Banana', 'Cherry'];
+
+        console.log(fruits[1]);
+        let date = new Date();
+        console.log(date);
+        //0:일, 1:월 ~ 
+        console.log(new Date('2021-09-08').getDay());
+
+        let b = 123;
+        const obj = {
+            name: 'bj',
+            age: 33
+        }
+        const n = obj.name;
+        console.log(n);
+
+        function show(params) {
+            return params;
+        }
+
+        function disp(arg) {
+            console.log(arg);
+        }
+        const fn = show(234);
+        disp('hello');
+        console.log(fn);
+
+
+        let x = null;
+        let y;
+        console.log(y);
+        let myName = "byungje";
+        let email = 'ddddddd@ddd.dd';
+        let msg = 'hello ' + myName + 'sla';
+        let msg2 = `hello ${myName}`;
+        console.log('my name is' + myName + ' 데스');
+        console.log(msg);
+        console.log(msg2);
+        console.log(`당신의 메일주소는 ${email} 입니다.`);
+
+
+        //number
+
+        let number = 123;
+        let opacity = 12.34;
+        console.log(opacity);
+
+        let undef
+        let ob = {
+            kbs: 1004,
+            nickname: 'bejpark'
+        };
+        console.log(undef);
+        console.log(ob.nickname);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
