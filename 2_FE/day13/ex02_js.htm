@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let empty = null;
+        console.log(empty);
+
+        //object 객체 데이터
+        //여러 데이터를 key:value 형태로 저장한다.{}
+        let user = {
+            name: 'bejpark',
+            age: 85,
+            isValid: true
+        }
+        console.log(user);
+
+        var a = 2;
+        let b = 5;
+        var a = 1
+        console.log(a);
+
+        function helloFunc() {
+            console.log('hello js');
+        }
+        helloFunc();
+
+        let world = function() {
+            console.log('world');
+        }
+        helloFunc();
+        world();
+        const person = {
+            name: 'bj',
+            age: 25,
+            getName: function() {
+                return this.name;
+            }
+        };
+
+        let myname = person.getName();
+        console.log(myname);
+        console.log(person.age);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
