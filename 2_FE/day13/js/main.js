@@ -32,6 +32,21 @@ console.log(
 )
 
 boxEl.classList.remove('active');
-console.log(
-    boxEl.classList.contains('active')
-)
+let isContains = boxEl.classList.contains('active');
+console.log(isContains);
+
+const boxEl2 = document.querySelector('.box');
+
+//Getter 받는 용도
+console.log(boxEl2.textContent);
+//Setter 값 지정
+boxEl2.textContent = '덮어쓰기';
+console.log(boxEl2.textContent);
+
+const str1 = 'I-ON';
+//split : 인수 기준으로 쪼개서 배열로 반환
+//reverse : 뒤집기
+//join : 인수 기준으로 병합
+const str2 = str1.split('').reverse().join('');
+console.log(str1)
+console.log(str2)
