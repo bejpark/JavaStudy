@@ -40,3 +40,24 @@ console.log(sum2(7, 3, 8, 6))
 
 //array function
 //()=>{} vs function() {}
+
+const doubleFn = function(x, y) {
+    return x * 2;
+}
+console.log('doubleFn : ', doubleFn(7));
+
+console.log('doubleFn  ', doubleFn(3, 5, 8));
+
+// const doubleArrow = x=>{
+//     return x*2
+// }
+// const doubleArrow = x => x * 2
+const doubleArrow = x => ({ name: 'Yuna', x })
+
+console.log('doubleArrow : ', doubleArrow(3));
+// const f = 3;
+(function() {
+    console.log(d * 2);
+})();
+//(x)()
+//(x())
