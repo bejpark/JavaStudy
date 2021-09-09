@@ -47,13 +47,47 @@ const bejpark = {
 console.log(bejpark.getFullName())
 console.log('------------------------')
 
-function user(first, last) {
-    this.firstName = first
-    this.lastName = last
-    this.getFullName = function() {
-        return `${this.firstName} ${this.lastName}`;
+function person(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+    // this.getFullName=()=>{
+    //     return `${this.firstName} ${this.lastName}`;
+    // }
+    //return 타입만 있는경우
+    //this.getFullName=()=>`${this.firstName} ${this.lastName}`
+}
+
+person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+}
+
+const person1 = new person('yuna', 'kim');
+const person2 = new person('yuna2', 'kim2');
+const person3 = new person('yuna3', 'kim3');
+
+
+console.log(person)
+console.log(person1.firstName)
+console.log(person1.getFullName())
+
+
+class Vehicle {
+    constructor(name, whell) {
+        this.name = name
+        this.whell = whell
     }
 }
-const yuna = new user('yuna', 'kim');
-console.log(yuna)
-console.log(yuna.firstName)
+const myVehicle = new Vehicle('운송수단', 2)
+
+class Bicycle extends Vehicle {
+    constructor(name, wheel) {
+        super(name, wheel);
+    }
+}
+
+class Car extends Vehicle {
+    constructor(name, wheel, license) {
+        super(name, wheel);
+        this.license = license;
+    }
+}
