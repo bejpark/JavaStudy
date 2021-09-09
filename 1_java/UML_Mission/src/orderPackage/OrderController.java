@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.Vector;
-
+//커밋 방식 : UML Class Diagram 미션~
 
 public class OrderController {
 	//수주정보 : (고객번호(회원번호), 고객명, 주소, 전화번호), (수주번호, 수주날짜, 고객명, 수주수량)
