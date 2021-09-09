@@ -12,17 +12,3 @@ const person1 = new Emp(1, 'aa');
 const person2 = new Emp(2, 'bb');
 person1.getOutput()
 person2.getOutput()
-
-
-class Bicycle extends Vehicle {
-    constructor(name, wheel) {
-        super(name, wheel);
-    }
-}
-
-class Car extends Vehicle {
-    constructor(name, wheel) {
-        super(name, wheel);
-        this.license = license;
-    }
-}
