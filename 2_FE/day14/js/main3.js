@@ -52,7 +52,7 @@ console.log('doubleFn  ', doubleFn(3, 5, 8));
 //     return x*2
 // }
 // const doubleArrow = x => x * 2
-const doubleArrow = x => ({ name: 'Yuna', x })
+const doubleArrow = x => ({ name: 'Yuna', x });
 
 console.log('doubleArrow : ', doubleArrow(3));
 // const f = 3;
