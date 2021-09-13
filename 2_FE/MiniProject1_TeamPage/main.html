@@ -7,37 +7,50 @@
     <title>팀원 박병제</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <div class="titletext">
-                <h1>박 병 제</h1>
-                <h3>SW Engineer</h3>
-            </div>
-            <br>
-            <div class="menu_nav">
-                <li class="menu btn-aboutme">About me</li>
-                <li class="menu btn-contact">Contact</li>
-                <li class="menu btn-like"><a href="./movie.html">Favorite movie</a></li>
+            <div class="photo">
+                <div class="titletext">
+                    <h1>박 병 제</h1>
+                    <h3>SW Engineer</h3>
+                </div>
+                <br>
+                <div class="menu_nav">
+                    <li class="menu btn-aboutme">About me</li>
+                    <li class="menu btn-contact">Contact</li>
+                    <li class="menu btn-like"><a href="./movie.html">Favorite movie</a></li>
+                </div>
             </div>
         </header>
         <section class="sec">
             <h1 class="menu-title">About me</h1>
-            자기소개 하는 부분
+            <div class="inner">
+                <div class="profile">
+                    <img src="./images/profile.jpeg" alt="profile" class="profile_img">
+                </div>
+                <div class="resume"><img src="./images/potfolio.png" alt="resume" class="resume_img"></div>
+            </div>
         </section>
         <footer class="footer">
             <h1 class="menu-title">CONTACT</h1>
             <ul class="icons">
                 <li>
-                    <a href="#" class="icon youtube"><img src="./icons/youtube-brands.svg" alt="youtube"> </a>
+                    <a href="https://www.youtube.com/channel/UC-THwqJwz7-UFlWQJsoU2fw" class="icon youtube"><img src="./icons/youtube-brands.svg" alt="youtube"> </a>
                 </li>
                 <li>
-                    <a href="#" class="icon instagram"><img src="./icons/instagram-brands.svg" alt="instagram"> </a>
+                    <a href="https://www.instagram.com/bejpark/" class="icon instagram"><img src="./icons/instagram-brands.svg" alt="instagram"> </a>
                 </li>
                 <li>
-                    <a href="#" class="icon github"><img src="./icons/github-brands.svg" alt="github"> </a>
+                    <a href="https://github.com/bejpark/" class="icon github"><img src="./icons/github-brands.svg" alt="github"> </a>
                 </li>
                 <li>
                     <a href="#" class="icon phone"> <img src="./icons/phone-solid.svg" alt="phone"> </a>
