@@ -1,0 +1,166 @@
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    height: 115px;
+    text-align: center;
+}
+
+header>div {
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0.8;
+    line-height: 115px;
+}
+
+
+/* section1 */
+
+.sec1 {
+    padding-top: 100px;
+    display: flex;
+}
+
+.sec .sec1_image {
+    width: 210px;
+}
+
+.sec1_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.sec1_info {
+    margin-left: 40px;
+}
+
+.sec1_info .info-title #title {
+    font-size: 34px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.sec1_info .info-title {
+    margin-bottom: 30px;
+}
+
+.sec1_info .info_box {
+    display: flex;
+}
+
+.sec1_info .info_box .info-info:first-child {
+    margin-right: 60px;
+}
+
+.sec1_info .info-info .info_list {
+    display: table-row;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.sec1_info .info-info .info_list dt {
+    display: table-cell;
+    color: #98989c;
+    padding-right: 20px;
+}
+
+dl {
+    list-style: none;
+}
+
+.sec1_info .info-icon {
+    margin-top: 50px;
+    width: 810px;
+}
+
+.sec1_info .info-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* section2 */
+
+.sec2 {
+    margin-top: 50px;
+}
+
+.sec2 .contents .nav_list {
+    display: flex;
+}
+
+.sec2 .contents .nav_list .nav_btn {
+    padding: 20px;
+}
+
+.sec2 .contents .nav_list .nav_btn:hover {
+    cursor: pointer;
+    background-color: #444445;
+    color: white;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+#sec2_contents {
+    width: 1100px;
+}
+
+#sec2_contents img {
+    width: 100%;
+    height: 100%;
+}
+
+#sec2_contents .sub4_img img {
+    box-sizing: border-box;
+    width: 80%;
+    height: 80%;
+}
+
+
+/* footer */
+
+footer {
+    height: 164px;
+    background-color: #222223;
+}
+
+.footer_img {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+.footer_img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* youtube */
+
+.sub3_trailer {
+    margin: 50px 10px 30px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.youtube {
+    margin-top: 20px;
+}
+
+.youtube_margin {
+    height: 100px;
+}

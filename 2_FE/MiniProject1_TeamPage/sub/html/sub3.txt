@@ -1,0 +1,6 @@
+<div class="sub3_trailer">
+    메인 예고편
+</div>
+<hr>
+<iframe class="youtube" width="1100" height="619" src="https://www.youtube.com/embed/0pdqf4P9MB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube_margin"></div>
