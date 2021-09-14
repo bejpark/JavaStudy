@@ -12,3 +12,6 @@ $(document).ready(function() {
     });
 
 });
+
+$('ul li:first-child').fadeOut('slow');
+// $('ul li:first').hide();
