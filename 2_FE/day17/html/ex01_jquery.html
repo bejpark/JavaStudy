@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <p>one</p>
+    <div>
+        <p>two</p>
+    </div>
+    <p>three</p>
+
+    <script>
+        $("div>p").css("border", "3px dotted red");
+    </script>
+    <div class="ui-widget">
+        <label for="tags"></label>
+        <input type="text" id="tags"><br>
+
+        <label for="name"></label>
+        <input type="text" id="name"><br>
+    </div>
+</body>
+
+</html>
