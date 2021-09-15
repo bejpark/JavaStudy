@@ -1,0 +1,25 @@
+[{
+    "url":"dog_1.jfif",
+    "name":"요크셔 테리어",
+    "introduce":"무게 : 약 7파운드"
+},{
+    "url":"dog_2.jfif",
+    "name":"시추",
+    "introduce":"무게 4 ~ 15파운드"
+},{
+    "url":"dog_3.jfif",
+    "name":"스코티시 테리어",
+    "introduce":"무게 18 ~ 22파운드"
+},{
+    "url":"dog_4.jfif",
+    "name":"포메라니안",
+    "introduce":"무게 4 ~ 8파운드"
+},{
+    "url":"dog_5.jfif",
+    "name":"빠삐용",
+    "introduce":"무게 8 ~ 10파운드"
+},{
+    "url":"dog_6.jfif",
+    "name":"비숑 프리제",
+    "introduce":"무게 6 ~ 11파운드"
+}]

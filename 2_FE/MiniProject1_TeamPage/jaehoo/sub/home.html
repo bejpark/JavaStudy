@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>구글 지도</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkEbZvjXYX-uR5m2VNX9DaOfxs_fb68Uw"async defer></script>
+    <style>
+        /* 너비와 높이가 지정되어 있지 않으면 지도가 읽어지지 않음(에러는 안남, 안보임) */
+        #map{
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+ 
+    <script>
+       function showMarker(){
+            
+            // 지도가 보여질 요소
+            var e= document.getElementById('map');
+ 
+            // 원하는 좌표 객체
+            var mrhi= new google.maps.LatLng(35.311341676175516, 129.03031896733768);
+ 
+            // 표시되는 지도의 옵션 객체
+            var opts= {
+                center: mrhi,
+                zoom: 11
+            };
+ 
+            // 지도 보이기
+            var map=new google.maps.Map( e , opts );
+            
+            var marker= new google.maps.Marker( {
+                position: mrhi,
+                title:"우리집" // 마커에 마우스를 놓고 있으면 보이는 tootip(말풍선)
+            } );
+            marker.setMap(map);
+           
+         }
+     
+    </script>
+ 
+</head>
+<body>
+    <div id="map"></div>
+    <button onclick="showMarker()">show marker</button>
+ 
+</body>
+</html>

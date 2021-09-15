@@ -1,0 +1,25 @@
+[{
+    "url":"dog_1.jfif",
+    "name":"오스트레일리언 셰퍼드",
+    "introduce":"무게 : 40 ~ 70파운드"
+},{
+    "url":"dog_2.jfif",
+    "name":"바셋 하운드",
+    "introduce":"무게 40 ~ 65파운드"
+},{
+    "url":"dog_3.jfif",
+    "name":"저먼 쇼트헤어드 포인터",
+    "introduce":"무게 45 ~ 70파운드"
+},{
+    "url":"dog_4.jfif",
+    "name":"시베리안 허스키",
+    "introduce":"무게 35 ~ 60파운드"
+},{
+    "url":"dog_5.jfif",
+    "name":"콜리",
+    "introduce":"무게 50 ~ 75파운드"
+},{
+    "url":"dog_6.jfif",
+    "name":"래브라도 리트리버",
+    "introduce":"무게 55 ~ 80파운드"
+}]

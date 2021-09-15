@@ -1,0 +1,391 @@
+/* COMMON */
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  background-color: #efefef;
+}
+
+img {
+  display: block;
+}
+
+
+
+.inner {
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: 1000px; /* 가로 길이 주기*/
+  margin: 0 auto; /* 가운데 정렬 */
+  background-color: white; /*배경 색 white로*/
+  top: -20px; 
+  
+}
+a{
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  background-color: #008275 ;
+  border-bottom: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+footer{
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  background-color: rgb(171, 177, 171);
+  border-top: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  text-align: right; /* 글씨 오른쪽 정렬 */
+  padding: 20px 0; /* 너무 붙어있는 것 같아서 상하에 padding 20px만큼, 좌우는 안 줌 */
+  font-size: 14px;  /* font 크기 14px로 */
+}
+
+header>.inner {
+  height: 50px;
+}
+
+header .inner .logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+header .logo>img {
+  height: 50px;
+}
+
+header .header-menu {
+  position: absolute;
+  width:500px;
+  height:100%;
+  margin: 0 auto;
+  left: 120px;
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+}
+
+header .header-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap:nowrap;
+  align-items: center;
+}
+
+header .header-menu ul.menu li {
+  height: 100%;
+  line-height: 50px;
+  align-items: center;
+}
+
+header .header-menu ul.menu li:hover {
+  background-color: #38A59A;
+}
+
+header .header-menu ul.menu li a {
+  line-height: 100%;
+  height: 100%;
+  margin-right : 30px;
+  font-size: 12px;
+  padding-left:20px;
+  margin-bottom:0%;
+  color: white;
+}
+
+
+.name{
+    margin-top: 20px;
+}
+
+.inner .name > h1{
+  font: 40px solid;
+}
+
+.firsttable{
+  margin-top:5px;
+}
+
+.firsttable .inner .name{
+  border: 1px solid  rgb(177, 169, 169);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+
+.intromarvel{
+  margin-top:20px;
+}
+.intromarvel .inner .marvel{
+  background-color: rgb(129, 11, 11);
+  border: 1px solid rgb(177, 169, 169);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intromarvel .inner .marvel > img{
+  width:200px;
+  height:auto;
+}
+
+.intromarvel .inner .marvel > span{
+  font-size:15px;
+  color:white;
+  padding:10px;
+}
+
+.select{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.select > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.select > li > a{
+  color:white;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.marvelseries{
+  margin-top: 30px;
+}
+.marvelseries .inner .marvels{
+  width: 95%;
+  margin:0 auto;
+}
+
+.marvelseries .inner .marvels > table{
+  width: 100%;
+  border: 3px solid rgb(129, 11, 11) ;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
+  box-shadow: 0 0 0 2px rgb(129, 11, 11);
+}
+
+.marvelseries .inner .marvels > table th{
+
+  padding: 8px;
+  background-color:  rgb(129, 11, 11);
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+}
+
+.marvelseries .inner .marvels > table td{
+  padding:10px;
+  vertical-align: center;
+  text-align: center;
+  border : 1px solid rgb(177, 169, 169);
+  font-size:12px;
+  font-weight: bold;
+}
+
+.marvelseries .inner .marvels > table td:nth-child(2){
+  padding:10px;
+  text-align: center;
+  border : 1px solid rgb(177, 169, 169);
+  width: 120px;
+}
+
+
+
+.marvelseries .inner .marvels > table td:nth-child(4){
+  padding:10px;
+  text-align: center;
+  border : 1px solid rgb(177, 169, 169);
+  width: 120px;
+}
+
+.chart{
+  margin-top: 30px;
+}
+
+.chart .inner{
+  position: relative;
+}
+
+.chart .inner .mokcha{
+  position:absolute;
+  left:30px;
+  top:20px;
+  border: 1px solid rgb(177, 169, 169);
+  padding:15px;
+  padding-bottom:30px;
+}
+
+.chart .inner .mokcha > ul h4 {
+  font-size:20px;
+  font-weight: bold;
+  margin-top:10px;
+  margin-left: 10px;
+  margin-bottom:20px;
+}
+
+.chart .inner .mokcha > ul li {
+  font-size:12px;
+  margin-top:10px;
+  margin-left: 30px;
+}
+
+.chart .inner .main-chart{
+  position:absolute;
+  left:300px;
+  top: 20px;
+}
+
+.main-chart > table{
+  width: 600px;
+  border: 3px solid rgb(250, 208, 22) ;
+  border-collapse: collapse;
+  border-style: hidden;
+  box-shadow: 0 0 0 4px rgb(250, 208, 22);
+}
+
+.main-chart > table th {
+  background-color: rgb(5, 64, 82);
+  font-size:20px;
+  padding:20px;
+  color:rgb(250, 208, 22);
+  font-weight: bolder;
+}
+
+.main-chart > table th #year{
+  font-size:12px;
+}
+
+.main-chart > table #sangchimg{
+  width: 140px;
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/sangchi.jpg");
+  border: 1px solid rgb(177, 169, 169);
+}
+
+.main-chart > table th #eng{
+  font-size:12px;
+  font-style: italic;
+}
+
+.main-chart > table #what{
+  background-color: rgb(5, 64, 82);
+  font-size:15px;
+
+  padding:10px;
+  color:rgb(250, 208, 22);
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid white ;
+}
+.main-chart > table th{
+  border: 1px solid rgb(177, 169, 169);
+  padding-left: 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.main-chart > table td{
+  border: 1px solid rgb(177, 169, 169);
+  padding-left: 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:12px;
+}
+
+.main-chart > table #poster{
+  font-size:12px;
+  padding:5px;
+  color:rgb(250, 208, 22);
+  border: 1px solid rgb(177, 169, 169);
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid white ;
+}
+
+
+
+.contents {
+  margin-top: 2000px;
+  width: 95%;
+}
+
+.contents .conTitle h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  font-size: 36px;
+  font-weight: 700;
+  display:block;
+}
+
+.contents .conTitle h2 a {
+  color: #0275d8;
+}
+
+.contents .conTitle h2 #material-icons {
+  margin-right: 0px;
+}
+
+.contents .conContent {
+  font-size: 16px; 
+  padding-top: 15px; 
+  padding-bottom: 20px;
+}
+
+.contents .conContent span{
+  display: block;
+  padding-top: 15px;
+}
+
+.contents .conContent table {
+  border: 2px solid #e7b055;
+  background-color: #164451;
+  margin: 30px auto;
+  text-align: center;
+  color: #FFC756;
+  font-weight: 700;
+
+}
+
+.contents .conContent table td {
+  line-height: 2;
+  border: 1px solid #ddd;
+}
+
+.contents .conContent ul {
+  padding-left: 30px;
+  list-style-type: disc;
+}
+.contents .conContent li, .contents .conContent span {
+  padding-top: 5px;
+}
+
+.contents .conContent img {
+  display: inline-block;
+  width: 16px;
+  margin-right: 5px;
+}
+

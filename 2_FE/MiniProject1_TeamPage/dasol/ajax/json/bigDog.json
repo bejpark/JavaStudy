@@ -1,0 +1,25 @@
+[{
+    "url":"dog_1.jfif",
+    "name":"버니즈 마운틴 도그",
+    "introduce":"무게 : 70 ~ 115파운드"
+},{
+    "url":"dog_2.jfif",
+    "name":"치누크",
+    "introduce":"무게 50 ~ 90파운드"
+},{
+    "url":"dog_3.jfif",
+    "name":"호바와트",
+    "introduce":"무게 65 ~ 90파운드"
+},{
+    "url":"dog_4.jfif",
+    "name":"핏불 테리어",
+    "introduce":"무게 30 ~ 80파운드"
+},{
+    "url":"dog_5.jfif",
+    "name":"사모예드",
+    "introduce":"무게 35 ~ 65파운드"
+},{
+    "url":"dog_6.jfif",
+    "name":"에어데일 테리어",
+    "introduce":"무게 50 ~ 70파운드"
+}]

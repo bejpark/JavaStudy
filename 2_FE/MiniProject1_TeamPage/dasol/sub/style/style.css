@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    font-weight: bold;
+}
+body{
+    background-color: rgb(228, 225, 225);
+}
+#wrap{
+    background-color: white;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    padding: 50px 0;
+}
+#menu>ul{
+    display: flex;
+    list-style: none;
+}
+#menu>ul>li:first-child{
+    width: 400px;
+    height: 190px;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    margin: 20px;
+    padding: 10px;
+}
+#menu>ul>li:first-child>h4{
+    font-size: 18px;
+    margin: 10px 0;
+}
+#menu>ul>li:first-child>ol{
+    margin: 0 20px;
+}
+#menu>ul>li:first-child>ol>li{
+    margin: 5px 0;
+}
+#menu>ul>li:last-child{
+    width: 600px;
+}
+#menu>ul>li>table{
+    width: 600px;
+    border: 2px solid rgb(93, 33, 33);
+}
+
+#menu>ul>li>table th{
+    background-color: rgb(83, 8, 8);
+    color: red;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+#menu>ul>li>table td{
+    padding: 10px;
+    border: 1px solid gray; 
+    line-height: 20px;  
+}
+#menu>ul>li>table img{
+    width: 100%;
+}
+#menu>ul>li>table #img{ 
+    padding: 0;
+}/*이미지 있는 표에 패딩제거*/
+
+/*****contents******/
+h2{
+    font-size: 30px;
+    margin: 40px 0 0;
+}
+hr{
+    margin: 20px 0;
+}
+#outline div{
+    line-height: 20px;
+}
+#preview ul{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    width: 1000px;
+}
+#preview ul iframe{
+    width: 500px;
+}
+#character ul li{
+    margin-left: 30px;
+    list-style-type: disc;
+    line-height: 30px;
+}
+#character ul li ul li{
+    list-style-type: circle;
+}
+#story div{
+    line-height: 25px;
+}
+
+footer{
+    height: 100px;
+}

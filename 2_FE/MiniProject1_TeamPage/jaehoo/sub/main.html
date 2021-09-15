@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팀원 이재후</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+    <script defer src="./js/main.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../sub/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#driver').click(function(){
+                $('#stage').load('home.html')
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="photo">
+                <div class="titletext">
+                    <h1>양 산</h1>
+                    <h3>Gyeongsangnam-do</h3>
+                </div>
+                <br>
+                <div class="menu_nav">
+                    <li class="menu btn-aboutme">여행지</li>
+                    <li class="menu btn-contact"> <a href="https://www.yangsan.go.kr/">양산홈</a></li>
+                    <li class="menu btn-like"><a href="./project/index.html">Favorite movie</a></li>
+                    <li class="menu btn-myhome">  <p></p> <div id="stage"> </div>
+                    <input type = "button" id = "driver" value="양산위치"><br/></li>
+                </div>
+        </div>
+</header>
+        <section class="sec">
+            <h1 class="menu-title">여행지</h1>
+            <div class="slide_box"> 
+                <ul class="slide_wrap">
+                    <li class="slide_item"><a href="http://tongdosa.or.kr/index.php"><img src="../sub/img/1_통도사.jpg"></a></li>
+                    <li class="slide_item"><a href="http://www.knnews.co.kr/news/articleView.php?idxno=1123734"><img src="../sub/img/2_배내골.jpg"></a></li>
+                    <li class="slide_item"><a href="http://www.naewon.or.kr/"><img src="../sub/img/3_내원사.jpg"></a></li>
+                    <li class="slide_item"><a href="https://namu.wiki/w/%EC%B2%9C%EC%84%B1%EC%82%B0"><img src="../sub/img/4_천성산.jpg"></a></li>
+                 
+                </ul>
+            </div>
+          
+        </section>
+   
+        <footer class="footer">
+            <h1 class="menu-title">링크</h1>
+            <ul class="icons">
+                <li>
+                    <a href="https://www.youtube.com/watch?v=7smL_uc12oM&ab_channel=%EC%96%91%EC%82%B0%EC%8B%9C%EA%B3%B5%EC%8B%9D%EC%9C%A0%ED%8A%9C%EB%B8%8C" class="icon youtube"><img src="./icons/youtube-brands.svg" alt="youtube"> </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/yangsancity/?hl=ko" class="icon instagram"><img src="./icons/instagram-brands.svg" alt="instagram"> </a>
+                </li>
+                <li>
+                    <a href="#" class="icon github"><img src="./icons/github-brands.svg" alt="github"> </a>
+                </li>
+                <li>
+                    <a href="#" class="icon phone"> <img src="./icons/phone-solid.svg" alt="phone"> </a>
+                </li>
+                <li>
+                    <a href="mailto:tig00566@gmail.com" class="icon email"><img src="./icons/google-brands.svg" alt="email"> </a>
+                </li>
+            </ul>
+            <p class="copyright">&copy; Untitled. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

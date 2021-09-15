@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!--Google Material Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!--Swiper-->
+
+    <script>
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v2/search/image",
+                data: {
+                    query: "샹치"
+                },
+                headers: {
+                    Authorization: "KakaoAK 08f69adda10bd8413a933dffd0daa848"
+                }
+            })
+            .done(function (msg) {
+
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[0].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[1].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[2].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[3].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[4].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[5].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[6].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[7].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[8].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[9].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[10].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[11].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[12].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[13].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[14].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[15].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[16].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[17].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[18].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[19].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[20].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[21].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[22].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[23].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[24].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[25].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[26].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[27].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[28].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[29].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[30].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[31].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[32].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[33].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[34].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[35].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[36].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[37].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[38].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[39].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[40].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[41].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[42].image_url +"'/></div>");
+                $('.swiper-wrapper').append("<div class='swiper-slide'><img src='" + msg.documents[43].image_url +"'/></div>");
+                console.log(msg);
+
+            });
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+ 
+    <link rel="stylesheet" href="./css/ajax.css">
+
+</head>
+
+<body>
+    <center>
+        <h1>카카오 이미지 api</h1>
+    </center>
+    <section class="notice">
+        <div class="promotion">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-prev">
+                <span class="material-icons">arrow_back</span>
+            </div>
+            <div class="swiper-next">
+                <span class="material-icons">arrow_forward</span>
+            </div>
+
+        </div>
+    </section>
+    <script type="text/javascript" src="./ajax.js"></script>
+
+</body>
+
+</html>

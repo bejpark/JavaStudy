@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../image/background_star.png);
+}
+#wrap{
+    width: 1200px;
+    margin: auto;
+}
+header{
+    
+}
+header>h1{
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    margin: 30px;
+}
+header>ul{
+    display: flex;
+    margin: 10px 400px ;
+}
+header>ul>li{
+    color: white;
+    font-size: 20px;
+    margin: 10px 20px;
+    
+}
+
+/*****contents******/
+#contents{
+    padding: 100px 0px 50px;
+    height: 500px;
+}
+#contents ul{
+    display: flex;
+}
+#contents .show{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 2px 2px 10px 5px white;
+}
+#contents .show:hover{
+    width: 400px;
+    height: 500px;
+    border-radius: 30px;
+    
+    transition: 1s;
+}
+#contents .show a img{
+    position: absolute;
+    width: 400px;
+    top: 0;
+}
+#contents .show a img:hover{
+    top: -500px;
+    transition: 10s;
+}
+
+
+/*footer*/
+footer{
+    margin: 10px 0 50px;
+}
+footer>p{
+    text-align: center;
+    color: white;
+}
