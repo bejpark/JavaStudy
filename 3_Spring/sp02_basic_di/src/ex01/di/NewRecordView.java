@@ -16,7 +16,7 @@ public class NewRecordView {
 		System.out.printf("math : %d\n", record.getMath());
 		System.out.printf("com : %d\n", record.getCom());
 		System.out.printf("total : %d\n", record.total());
-		System.out.printf("avg : %d\n", record.avg());
+		System.out.printf("avg : %f\n", record.avg());
 
 	}
 
