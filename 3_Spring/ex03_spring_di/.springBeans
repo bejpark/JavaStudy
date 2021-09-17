@@ -10,6 +10,7 @@
 		<config>src/ex01/di/ctx.xml</config>
 		<config>src/ex02/di/ctx.xml</config>
 		<config>src/ex03/di/annot/appContext.xml</config>
+		<config>src/quiz/di/ctx.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="student" class="quiz.di.Student">
+	<constructor-arg><value>김민수</value></constructor-arg>
+		<constructor-arg><value>21</value></constructor-arg>
+		<property name="major" value="경영학과"></property>
+		<property name="score" value="3.8"></property>
+	</bean>
+	
+	<bean id="worker" class="quiz.di.Worker">
+	<constructor-arg><value>이민정</value></constructor-arg>
+		<constructor-arg><value>27</value></constructor-arg>
+		<property name="dep"><value>영업팀</value></property>
+		<property name="rank"><value>주임</value></property>
+	</bean>
+
+
+</beans>
