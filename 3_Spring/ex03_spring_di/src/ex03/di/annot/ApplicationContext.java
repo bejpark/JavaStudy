@@ -32,5 +32,11 @@ public class ApplicationContext {
 		return mycats;
 
 	}
+	
+	@Bean
+	public Cats catsInfo() {
+		Cats cats = new Cats(this.cat2());
+		return cats;
+	}
 
 }

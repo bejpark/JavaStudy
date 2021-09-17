@@ -3,6 +3,9 @@ package ex03.di.annot;
 public class Cats {
 	private MyCats myCats;
 	
+	public Cats() {
+		
+	}
 	public Cats(MyCats myCats) {
 		this.myCats=myCats;
 	}
@@ -21,3 +24,10 @@ public class Cats {
 		
 	}
 }
+
+//class Point{
+//	int x,y;
+//	public Point(int x,int y) {
+//		
+//	}
+//}
