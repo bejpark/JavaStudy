@@ -5,10 +5,9 @@
 
 
 	<bean class="ex03.spring.aop.CalcImpl" id="c" />
-	<bean class="ex03.spring.aop.LogPringHandlerImpl"
-		id="logPringHandlerImpl" />
-	<bean class="org.springframework.aop.framework.ProxyFactoryBean"
-		id="proxy">
+	<bean class="ex03.spring.aop.LogPringHandlerImpl" id="logPringHandlerImpl" />
+	
+	<bean class="org.springframework.aop.framework.ProxyFactoryBean" id="proxy">
 		<property name="proxyInterfaces">
 			<list>
 				<value>ex03.spring.aop.Calc</value>
@@ -18,10 +17,7 @@
 		<property name="target" ref="c" />
 		<property name="interceptorNames">
 			<list>
-				<value>
-					<!-- handler:보조업무 -->
-					logPringHandlerImpl
-				</value>
+				<value>logPringHandlerImpl</value><!-- handler:보조업무 -->
 			</list>
 		</property>
 	</bean>
