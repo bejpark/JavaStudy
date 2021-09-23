@@ -1,5 +1,7 @@
 package com.kosta;
 
+import java.util.ArrayList;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,6 +21,8 @@ public class MainEntry {
 
 		MyInfomation info2 = ctx.getBean("info2", MyInfomation.class);
 		info2.processMessage(emp);
+		
+		
 		
 	}
 }
