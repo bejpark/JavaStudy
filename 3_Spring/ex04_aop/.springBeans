@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/ex03/spring/aop/appCtx.xml</config>
 		<config>src/ex04/spring/aop/ctx.xml</config>
+		<config>src/ex05/spring/aop/appCtx.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

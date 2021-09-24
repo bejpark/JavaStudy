@@ -7,7 +7,7 @@ import org.springframework.util.StopWatch;
 public class LogAdvice {
 	//Around 방식의 사전/사후 처리 AOP around 방시긍로 할 때는
 	//인수는 ProceedingJoinPoint, 리턴값은 object필수
-	public Object around(ProceedingJoinPoint point) throws Throwable {
+	public Object arround(ProceedingJoinPoint point) throws Throwable {
 		String methodName = point.getKind();
 		String methodName2 = point.getSignature().getName();
 		
