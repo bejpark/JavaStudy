@@ -33,3 +33,39 @@ select * from gift where g_end<all(200000,600000);
 select * from gift where g_end>all(200000,600000);
 
 
+
+--제약조건
+create table userlist(
+    id VARCHAR2(10) constraint id_pk PRIMARY key,
+    name varchar2(10) --not null
+    );
+
+
+select * from userlist;
+insert into userlist values('kingsmile','bej');
+insert into userlist values('kingsmile','bej');
+
+insert into userlist(id) values('gildong');
+insert into userlist(name) values('sss');
+
+create table fk_member(
+    code number(2) not null,
+    id varchar2(20) not null,
+    constraint id_fk references userlist2(id),
+    etc varchar2(10)
+);
+select * from member;
+desc member;
+
+
+create table userlist2(
+    id varchar(10) constraint userlist2_id_pk primary key,
+    jumin char(13) constraint jumin_un unique
+);
+
+select * from userlist2;
+
+insert into userlist2 values('kingsmile','bej');
+insert into userlist2 values('kingsmile','bej');
+insert into userlist2(id) values('gildong');
+insert into userlist2(jumin) values('gildong');
