@@ -1,0 +1,1 @@
+create user bj2 identified by oracle account UNLOCK;
