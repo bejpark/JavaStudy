@@ -61,6 +61,31 @@ select * from student;
 select deptno as "학과", round(avg(nvl(pay,0)),0) "평균 급여"
     from professor
     group by deptno;
+    
+    
 
 
+
+/*
+문제1] emp2 테이블에서 deptno (부서)별로 pay 합과 평균 구하기기
+문제2] emp2 테이블에서 emp_type별로 pay합과 평균 구하기
+문제3] emp3 테이블에서 직급별로 급여의 합, 평균 구하기
+문제4] emp2 테이블에서 직급별 급여의 합, 평균 구하는데 직급이 과장인 사람들만 출력하기
+*/
+select deptno "부서", sum(pay), avg(pay) 
+    from emp2
+    group by deptno;
+
+select emp_type,sum(pay),avg(pay)
+    from emp2
+    group by emp_type;
+
+select position,sum(pay),round(avg(pay),0)
+    from emp2
+    group by position;
+
+select position,sum(pay),round(avg(pay),0)
+    from emp2
+    group by position
+    HAVING position = '과장';
 
