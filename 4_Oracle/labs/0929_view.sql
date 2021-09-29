@@ -62,5 +62,12 @@ create or replace view v_emp2
 문제9] emp 테이블에서 c_emp22에 직위가 'manager'인 
       사람들만 레코드 복사하시오.
 */
+create table c_professor
+    as select name,position,hiredate,email,hpage from professor where 1=0;
+select * from c_professor;
 
+create table c_emp22
+    as select * from emp where 1=0;
 
+insert into c_emp22 (select * from emp where job='MANAGER');
+select * from c_emp22;

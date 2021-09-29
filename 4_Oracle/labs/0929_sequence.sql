@@ -57,3 +57,17 @@ insert into kosa_tab2 values(seq_freeboard.nextval,'bccc3');
 
 
 delete from kosa_tab2 where num=3;
+
+
+/*
+자동증가 시퀀스명 seq_test라 지정, 100시작 100증가, 테이블 seq_test 테이블(num,name,phone)만들기
+레코드 3개추가 확인
+*/
+create sequence seq_test
+    start with 100
+    increment by 100;
+create table seq_test_table (num number,name varchar(20),phone varchar(20));
+insert into seq_test_table values(seq_test.nextval,'kim','010-1234-1234');
+insert into seq_test_table values(seq_test.nextval,'lee','010-2345-2345');
+insert into seq_test_table values(seq_test.nextval,'park','010-3456-4567');
+select * from seq_test_table;
