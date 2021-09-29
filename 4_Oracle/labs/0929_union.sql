@@ -84,14 +84,18 @@ select * from emp;
 select empno,ename,sal,round(sal*1.15,0) "New Salary"
     from emp;
 
+select empno,ename,sal,cast(sal*1.15 as int) "New Salary" from emp;
+
 --문제5]각 사원의 이름을 표시하고, 근무 달 수를 계산하여 컬럼명을 
 --     Months_Works로 지정하고, 근무 달수를 기준으로 오래된 사람부터
 --     정렬하여 출력하시오.
 select ename,round(MONTHS_BETWEEN(SYSDATE,hiredate),0) "Months_Work"
     from emp
-    order by "Months_Work" desc;
+    order by hiredate;
 
 --문제6]사원의 이름과 커미션을 출력하되, 커미션이 책정되지 않은 
 --    사원의 커미션은 'no commission'으로 출력하시오.
-select ename,nvl(comm,'no') from emp;
-select ename,comm from emp;
+select ename, decode(nvl(comm, 0), 0, 'no commsion', comm) "commission" from emp;
+--nvl(cast(comm as varchar2(20)), '~~')
+
+
