@@ -5,7 +5,7 @@
 	version="4.0">
   <display-name>day26_web</display-name>
   
-  
+  <!-- 
   <servlet>
   	<servlet-name>ServletDate</servlet-name>
   	<servlet-class>com.kosa.date.ServletDate</servlet-class>
@@ -13,7 +13,7 @@
   <servlet-mapping>
   	<servlet-name>ServletDate</servlet-name>
   	<url-pattern>/</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

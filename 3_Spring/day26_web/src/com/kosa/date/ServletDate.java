@@ -5,10 +5,12 @@ import java.io.PrintWriter;
 import java.util.Calendar;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet("/aa")
 public class ServletDate extends HttpServlet{
 
 	@Override
