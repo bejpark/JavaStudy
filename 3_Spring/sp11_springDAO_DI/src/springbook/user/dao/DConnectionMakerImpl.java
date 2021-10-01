@@ -9,7 +9,7 @@ public class DConnectionMakerImpl implements ConnectionMaker {
 	public Connection makeConnection() throws Exception {
 		Class.forName("mysql");
 		Connection conn = DriverManager.getConnection(
-				"mysql", 
+				"jdbc:mysql://localhost:3306/sampleDB", 
 				"kingsmile", "mysql");
 				
 		return conn;

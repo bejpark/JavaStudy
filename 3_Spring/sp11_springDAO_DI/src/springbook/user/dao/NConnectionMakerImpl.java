@@ -9,8 +9,8 @@ public class NConnectionMakerImpl implements ConnectionMaker {
 	public Connection makeConnection() throws Exception {
 		Class.forName("oracle.jdbc.OracleDriver");
 		Connection conn = DriverManager.getConnection(
-				"jdbc:oracle:thin:@localhost:1521:XE", 
-				"kingsmile", "oracle");
+				"jdbc:oracle:thin:@kosa3.iptime.org:50121:orcl", 
+				"bejpark", "oracle");
 				
 		return conn;
 	}

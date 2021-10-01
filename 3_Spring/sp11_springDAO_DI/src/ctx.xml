@@ -6,8 +6,8 @@
 
 	<bean id="conn"  class="springbook.user.dao.NConnectionMakerImpl"/>
 	
-	<bean id="dao" class="springbook.user.dao.UserDAO" scope="prototype">
-		<constructor-arg ref="conn"/>
-	</bean>
-	
+	<bean id="dao" class="springbook.user.dao.UserDAO" scope="prototype"/>
+		<!-- <constructor-arg ref="conn"/> -->
+<!-- 	</bean>
+ -->	
 </beans>

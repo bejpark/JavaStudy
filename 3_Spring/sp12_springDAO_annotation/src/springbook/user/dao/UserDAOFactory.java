@@ -3,7 +3,7 @@ package springbook.user.dao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@Configuration	//xml설정파일 역할
 public class UserDAOFactory {
 	
 	@Bean

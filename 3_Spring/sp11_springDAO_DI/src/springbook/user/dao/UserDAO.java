@@ -6,12 +6,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import springbook.user.domain.UserVO;
 
 public class UserDAO { // Controller
 	private ConnectionMaker connectionMaker;
 
-	// public UserDAO() {}
+	@Autowired
+	public UserDAO() {}
 	public UserDAO(ConnectionMaker connectionMaker) { // DI
 		this.connectionMaker = connectionMaker;
 	}
