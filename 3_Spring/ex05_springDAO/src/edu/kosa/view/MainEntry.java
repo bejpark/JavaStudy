@@ -12,11 +12,21 @@ public class MainEntry {
 		GiftDAO dao = new GiftDAOImpl();
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("선택하세요 : 1.insert/2.selectAll/3.select/4.update/5.delete/6.close");
+		System.out.println("선택하세요 : 1.insert\n2.selectAll\n3.select\n4.update\n5.delete\n6.close");
 		
 		switch(sc.nextInt()) {
 		case 1:
 			GiftVO vo = new GiftVO();
+			System.out.print("gno = ");
+			vo.setGno(sc.nextInt());
+			System.out.print("gname = ");
+			vo.setGname(sc.next());
+			System.out.print("최하 = ");
+			vo.setG_start(sc.nextInt());
+			System.out.print("최고 = ");
+			vo.setG_end(sc.nextInt());
+			dao.insert(vo);
+			System.out.print(vo.getGname()+" 추가 성공");
 			break;
 		case 2:		
 			dao.selectAll();

@@ -1,8 +1,11 @@
 package edu.kosa.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import edu.kosa.model.GiftVO;
 
 public abstract class GiftDAO {
 	//DB연결 관련 메소드
@@ -10,6 +13,24 @@ public abstract class GiftDAO {
 	public abstract Connection getConnection() throws Exception;
 	
 	//insert
+	public void insert(GiftVO vo) throws Exception{
+		Connection conn = getConnection();
+		String sql = "insert into gift(gno,gname,g_start,g_end) values(?,?,?,?)";
+		//Statement stmt = conn.createStatement();
+		//int result = stmt.executeUpdate(sql);
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1,vo.getGno());
+		pstmt.setString(2,vo.getGname());
+		pstmt.setInt(3,vo.getG_start());
+		pstmt.setInt(4,vo.getG_end());
+		
+		int result = pstmt.executeUpdate();
+		
+		System.out.println(result+"입력 성공했습니다.");
+		pstmt.close();
+		//stmt.close();
+		conn.close();
+	}
 	
 	//selectAll
 	public void selectAll() throws Exception{
