@@ -7,8 +7,9 @@
 	<bean name="/list.bo" class="com.edu.kosa.HelloController" />
 
 	<bean name="/write.bo" class="com.edu.kosa.WriteController" />
-<!-- 	<bean name="/info.bo" class="com.edu.kosa.HelloController" />
- -->
+	<bean class="com.edu.kosa.GreetingController" />
+
+	<!-- <bean name="/info.bo" class="com.edu.kosa.HelloController" /> -->
 	<!-- view resolver -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
