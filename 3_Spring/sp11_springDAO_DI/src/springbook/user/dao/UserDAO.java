@@ -13,8 +13,8 @@ import springbook.user.domain.UserVO;
 public class UserDAO { // Controller
 	private ConnectionMaker connectionMaker;
 
-	@Autowired
-	public UserDAO() {}
+	//@Autowired
+	//public UserDAO() {}
 	public UserDAO(ConnectionMaker connectionMaker) { // DI
 		this.connectionMaker = connectionMaker;
 	}
