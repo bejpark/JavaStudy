@@ -3,8 +3,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 	<!-- spring-servlet.xml -->
-	
-	
-	<bean name="/" class="com.edu.kosa.HelloController"/>
+
+	<bean name="/list.bo" class="com.edu.kosa.HelloController" />
+
+	<bean name="/write.bo" class="com.edu.kosa.WriteController" />
+<!-- 	<bean name="/info.bo" class="com.edu.kosa.HelloController" />
+ -->
+	<!-- view resolver -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />  <!-- 접두사 -->
+		<property name="suffix" value=".jsp" />  <!-- 접미사 -->
+	</bean>
 
 </beans>

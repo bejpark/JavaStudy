@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>list.jsp page</title>
 </head>
 <body>
-	<h1>Hello ${name}</h1>
-	<h1>phone number ${tel}</h1>
-	<h3>나이는 : ${age}</h3>
+${msg}
 </body>
 </html>
