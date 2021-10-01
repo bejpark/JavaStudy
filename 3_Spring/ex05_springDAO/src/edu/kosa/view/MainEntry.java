@@ -32,13 +32,29 @@ public class MainEntry {
 			dao.selectAll();
 			break;
 		case 3:
-			System.out.println("gno select");
+			System.out.print("gno select : ");
+			int gno = sc.nextInt();
+			vo = dao.select(gno);
+			System.out.println(vo.getGno()+"/"+vo.getGname()+"/"+vo.getG_start()+"/"+vo.getG_end());
 			break;
 		case 4:
-			System.out.println("update call");
+			GiftVO vo2 = new GiftVO();
+			System.out.print("update call : ");
+			vo2.setGno(sc.nextInt());
+			System.out.print("gname = ");
+			vo2.setGname(sc.next());
+			System.out.print("최하 = ");
+			vo2.setG_start(sc.nextInt());
+			System.out.print("최고 = ");
+			vo2.setG_end(sc.nextInt());
+			dao.update(vo2);
+			System.out.print(vo2.getGname()+" update 성공");
 			break;
 		case 5:
-			System.out.println("delete call");
+			System.out.print("delete call : ");
+			int gno3 = sc.nextInt();
+			dao.delete(gno3);
+			System.out.println(gno3+" 삭제완료");
 			break;
 		case 6:
 			System.out.println("Exit");

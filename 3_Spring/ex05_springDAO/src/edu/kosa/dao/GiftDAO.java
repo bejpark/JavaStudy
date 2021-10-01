@@ -52,9 +52,44 @@ public abstract class GiftDAO {
 		}//while end
 	}//selectAll end
 	//select - 조건에 맞는것 select하기(gno)
-	
+	public GiftVO select(int gno) throws Exception{
+		Connection conn = getConnection();
+		PreparedStatement ps = conn.prepareStatement("SELECT * FROM GIFT WHERE GNO=?");
+		
+		ps.setInt(1, gno);
+		ResultSet rs = ps.executeQuery();
+		rs.next();
+		GiftVO vo = new GiftVO();
+		vo.setG_end(rs.getInt("g_end"));
+		vo.setG_start(rs.getInt("g_start"));
+		vo.setGname(rs.getString("gname"));
+		vo.setGno(gno);
+		return vo;	
+	}
 	//update
-	
+	public void update(GiftVO vo) throws Exception{
+		Connection conn = getConnection();
+		String sql = "update gift set gname = ?, g_start = ?, g_end = ? WHERE GNO=?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1,vo.getGname());
+		pstmt.setInt(2,vo.getG_start());
+		pstmt.setInt(3,vo.getG_end());
+		pstmt.setInt(4,vo.getGno());
+		int result = pstmt.executeUpdate();
+		System.out.println(result+"개의 gno : "+vo.getGno()+" update 성공했습니다.");
+		pstmt.close();
+		conn.close();
+	}
 	//delete
+	public void delete(int gno) throws Exception{
+		Connection conn = getConnection();
+		String sql = "delete from gift where gno=?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1,gno);
+		int rs = pstmt.executeUpdate();
+		System.out.println(rs+"개의 데이터 삭제 성공했습니다.");
+		pstmt.close();
+		conn.close();
+	}
 
 }
