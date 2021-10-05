@@ -4,21 +4,16 @@ import java.util.Date;
 
 //VO = value object ==TO==DTO
 public class BoardVO { //Model
-	private int seq,number;
+	private int seq,readcount;
 	private String title,writer,content;
-	private Date date;
+	private Date regDate;
 	public int getSeq() {
 		return seq;
 	}
 	public void setSeq(int seq) {
 		this.seq = seq;
 	}
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -37,11 +32,17 @@ public class BoardVO { //Model
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Date getDate() {
-		return date;
+	public int getReadcount() {
+		return readcount;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setReadcount(int readcount) {
+		this.readcount = readcount;
+	}
+	public Date getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
 
 }
