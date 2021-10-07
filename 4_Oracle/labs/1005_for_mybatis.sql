@@ -16,6 +16,7 @@ insert into board values(seq_board.nextVal,'title2','writer2','contents2...',sys
 
 commit;
 
+
 CREATE TABLE spring_board
 (
   num NUMBER, 
