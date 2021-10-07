@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.postServer.dto.PostRequestDto;
+
 @RestController
 @RequestMapping("/api")
 public class PostApiController {
@@ -17,6 +19,12 @@ public class PostApiController {
 			System.out.println("key: "+strObjectEntry.getKey());
 			System.out.println("value : "+strObjectEntry.getValue());
 		});
+	}
+	
+	
+	@PostMapping("/post2")
+	public void post2(@RequestBody PostRequestDto dto) {
+		System.out.println(dto);
 	}
 
 }
