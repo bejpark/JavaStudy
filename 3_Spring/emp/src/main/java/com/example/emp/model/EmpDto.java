@@ -14,6 +14,7 @@ import lombok.Data;
 @Table(name="BootEmp")
 @Data
 public class EmpDto implements Serializable {
+	//pk
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long	empno;
