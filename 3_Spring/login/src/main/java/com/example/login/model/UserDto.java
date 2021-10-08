@@ -1,4 +1,4 @@
-package com.example.emp.model;
+package com.example.login.model;
 
 import java.io.Serializable;
 
@@ -10,16 +10,15 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
+
 @Entity
-@Table(name="BootEmp")
+@Table(name="loginUser")
 @Data
-public class EmpDto implements Serializable {
-	//pk
+public class UserDto implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long	empno;
-	private String ename;
-	private String sal;
+	private long userno;
+	private String id;
+	private String pwd;
 
 }
-
