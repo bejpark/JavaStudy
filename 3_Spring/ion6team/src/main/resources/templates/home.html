@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<p><a sec:authorize="isAnonymous()" th:href="@{member/new}"> sign up </a>
+	<p><a sec:authorize="isAnonymous()" th:href="@{member/login}"> login </a>
+	<p><a sec:authorize="isAuthenticated()" th:href="@{member/logout}">logout</a></p>
+	<p> name > <a sec:authorize="isAuthenticated()" th:text="${name}"></a> </p>
+	
+	<hr>
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+  <a th:href="@{admin}">Admin page</a>
+</div>
+<hr>
+<div sec:authorize="hasRole('ROLE_MEMBER')">
+  This content is only shown to users.
+</div>
+
+
+</body>
+</html>
