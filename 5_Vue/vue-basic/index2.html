@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue component</title>
+  </head>
+  <body>
+    <div id="app">
+      <button>컴포넌트 등록</button>
+      <my-component v-bind:propsdata="message"></my-component>
+      <my-local-component></my-local-component>
+      <child-component v-on:show-log="printText"></child-component>
+      <br>dd<br>
+      <child-component2></child-component2
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+      var eventBus = new Vue();
+      Vue.component('child-component',{
+        template:'<button v-on:click="showLog">show</button>',
+        methods:{
+          showLog:function(){
+            this.$emit('show-log');
+          }
+        }
+      });
+      Vue.component('child-component2',{
+        template:'<div>하위 컴포넌트 영역입니다. <button v-on:click="showLog">show</button></div>',
+        methods:{
+          showLog:function(){
+            eventBus.$emit('triggerEventBus',100);
+          }
+        }
+      });
+      Vue.component('my-component',{
+        props:['propsdata'],
+        template:'<div>전역 컴포넌트 등록 {{propsdata}}</div>'
+      });
+      var cmp={
+        template:'<div>지역 컴포넌트 등록</div>'
+      };
+      var app = new Vue({
+        el:'#app',
+        data:{
+          message:'from parent components'
+        },
+        methods:{
+          printText:function(){
+            console.log("received an event");
+          }
+        },
+        created:function(){
+          eventBus.$on('triggerEventBus',function(value){
+            console.log("이벤트 전달받음 :",value);
+          });
+        },
+        // components:{
+        //   'my-local-component':cmp
+        // }
+      });
+
+    </script>
+  </body>
+</html>
