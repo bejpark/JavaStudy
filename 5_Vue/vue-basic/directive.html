@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>directives</title>
+</head>
+
+<body>
+    <div id="app">
+        <a v-if="flag">두잇 vue</a>
+        <ul>
+            <li v-for="system in systems">{{system}}</li>
+        </ul>
+
+        <p v-show="flag">쇼</p>
+        <h5 v-bind:id="uid">바인드</h5>
+        <button v-on:click="aa">v-on 경고창</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        console.log('시작');
+        new Vue({
+            el: '#app',
+            data: {
+                flag: false,
+                systems: ['android', 'ios', 'window'],
+                uid: 10
+            },
+            methods: {
+                aa: function() {
+                    console.log('click')
+                    return alert('경고창')
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
