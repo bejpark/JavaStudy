@@ -1,53 +1,91 @@
 <template>
   <div id="app">
+
+
+
     <div class="menu">
-      <a v-for="menu in menus" :key="menu">{{menu}}</a>
+      <a v-for="menu in menus" :key="menu">{{menu}} </a>
     </div>
+    
 
-    <Discount></Discount>
+    <!-- 애니메이션 주기 - UI  -->
+    <!-- css로 애니메이션 주려면 1.시작전 class명, 2.애니메애션 끝난후 class명, 3.원할때 클래스명들 부착 -->
+    <!-- class명을 조건부로 넣으려면 { 클래스명: 조건 } -->
+  <!-- <div class="start" :class="{end : true }">  
+     <Modal :rooms="this.rooms" 
+          :roomNo="this.roomNo" 
+          @child="ModalChange" 
+          v-if="isModalOpen" />
+  </div> -->
 
-    <h1 class="h1">Land World에 오신걸 환영합니다</h1>
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- Vue에서는 <transition> 이용하면 애니메이션 쉽게 줄 수 있음 -->
+    <transition name="fade">
+     <Modal :rooms="this.rooms" 
+            :roomNo="this.roomNo" 
+          @child="ModalChange" 
+          v-if="isModalOpen" />
+    </transition>
 
-    <Modal :room="rooms[roomNo]" @modalClose="modalClose" v-if="isModalOpen"></Modal>
+    <h1 class="h1con"> land world 왔니? </h1>
+    <img alt="Vue logo" src="./assets/logo.png"> <p />
+    <button @click="priceSort()"> 가격순정렬</button>
+    <button @click="rollBack()"> 되돌리기 </button>
+        
+    <Card :rooms="this.rooms" @countsUp="countsUp" :counts="this.counts" @isModalSelected="isModalSelected"/>
 
-    <Card :rooms="rooms" @countsUp="countsUp" :counts="this.counts" @modalOpen="modalOpen"></Card>
   </div>
 </template>
 
 <script>
-  import data from './assets/roomdata.js';
-  import Discount from './components/Discount.vue';
-  import Modal from './components/Modal.vue';
-  import Card from './components/Card.vue';
-
+  import roomdata from './assets/roomdata.js'
+  import Modal from './components/Modal.vue'
+  import Card from './components/Card.vue'
   export default {
-    components: {
-      Discount,
-      Modal,
-      Card
-    },
     name: 'App',
     data() {
       return {
-        rooms: data,
-        menus: ['Home', 'Shop', 'Products', 'About'],
-        isModalOpen: false,
+        roomsOrg : [...roomdata],  // roomdata
         roomNo: 0,
+        rooms: roomdata,
+        type: 'color: red',
+        menus: ['home', 'shop', 'products', 'about'],
+        isModalOpen: false,
         counts:[0,0,0,0,0,0]
       }
     },
     methods: {
+      // 이름순 정렬하기 
+
+      rollBack() {
+        // this.rooms = this.roomsOrg;
+         this.rooms = [...this.roomsOrg];
+      },
+      priceSort() {
+        this.rooms.sort(function(a,b){
+          return a.price - b.price;
+        });
+        // var array=[3,5,2];
+        // array.sort(function(a,b){
+        //   return a - b;
+        // });
+        // console.log(array);
+      },
+      increase(i) {
+        this.$set(this.counts, i, this.counts[i] + 1);
+      },
       countsUp(num){
         this.$set(this.counts, num, this.counts[num] + 1);
       },
-      modalClose(isModalOpen) {
-        this.isModalOpen = isModalOpen;
+      ModalChange(flag) {
+        this.isModalOpen = flag;
       },
-      modalOpen(isModalOpen, roomNo) {
-        this.isModalOpen = isModalOpen;
-        this.roomNo = roomNo;
+      isModalSelected(num){
+        this.roomNo=num
+        this.isModalOpen=true
       }
+    },
+    components: {
+      Modal,Card
     }
   }
 </script>
@@ -61,31 +99,67 @@
     box-sizing: border-box;
   }
 
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #2c3e50;
+  /* .start {
+    opacity: 0;
+    transition: all 1s;
+  }
+  .end {
+    opacity: 1;
+  } */
+
+  /* 
+  .fade-enter-from{}
+  .fade-enter-active{}
+  .fade-enter-to{} */
+
+   /* 나타나는 애니매이션 */
+   .fade-enter-from{   
+     opacity: 0;
+   }
+  .fade-enter-active{
+    /* transition: all 1s; */
+    transition: translateY(-1000px);
+  }
+  .fade-enter-to{
+    opacity: 1;
+  }
+   /* 퇴장 애니메이션 */
+ .fade-leave-from{   
+     opacity: 1;
+   }
+  .fade-leave-active{
+    /* transition: all 1s; */
+     transition: translateY(0px);
+  }
+  .fade-leave-to{
+    opacity: 0;
   }
 
-  .img {
-    width: 250px;
-    height: 250px;
-    border: 1px solid blue;
-  }
+
 
   .menu {
-    background: darkslateblue;
+    background-color: darkgoldenrod;
     padding: 15px;
     border-radius: 5px;
   }
 
   .menu a {
-    color: white;
+    color: aliceblue;
     padding: 10px;
   }
 
-  .h1 {
+  .h1con {
     color: blue;
-    font-family: 맑은 고딕, 궁서체, 바탕체;
+    font-family: 맑은 고딕;
+  }
+
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
   }
 </style>

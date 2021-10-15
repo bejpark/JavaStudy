@@ -6,11 +6,11 @@
 
 <script>
     export default {
-        name: 'Discount'
+        name: 'discount'
     }
 </script>
 
-<style scoped>
+<style>
     .discount {
         background: #eee;
         padding: 10px;
