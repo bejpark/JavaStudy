@@ -1,87 +1,91 @@
 <template>
-  <div>
-    <form v-on:submit.prevent="submitForm">
-      <!-- <form v-on:submit="submitForm"> -->
-      <div>
-        <label for="username">ID: </label>
-        <input type="text" id="username" class="username-input" v-model="username" v-bind:class="{'error': isError}">
-      </div>
-      <div>
-        <label for="password">PW: </label>
-        <input type="password" id="password" v-model="password">
-      </div>
-      <button v-bind:disabled="!isUsernameValid" type="submit">로그인</button>
-    </form>
-    <!-- <p v-if="isError">올바르지 않은 ID 입니다.</p> -->
-    <p v-if="isUsernameValid">아이디가 이메일 형식이 맞습니다.</p>
-    <p v-if="isSuccess">로그인이 되었습니다.</p>
+  <div id="app">
+    <div class="menu">
+      <a v-for="menu in menus" :key="menu">{{menu}}</a>
+    </div>
 
-    <!-- <toast-popup v-bind:open="isSuccess"></toast-popup> -->
-    <ToastPopup v-bind:open="isSuccess" v-on:close="isSuccess = false"></ToastPopup>
+    <Discount></Discount>
+
+    <h1 class="h1">Land World에 오신걸 환영합니다</h1>
+    <img alt="Vue logo" src="./assets/logo.png">
+
+    <Modal :room="rooms[roomNo]" @modalClose="modalClose" v-if="isModalOpen"></Modal>
+
+    <Card :rooms="rooms" @countsUp="countsUp" :counts="this.counts" @modalOpen="modalOpen"></Card>
   </div>
 </template>
 
 <script>
-  // import ToastPopup from '@/components/ToastPopup.vue';
-  import ToastPopup from './components/ToastPopup.vue';
-
-  // 이메일에 대한 유효성 검사
-  function validateEmail(email) {
-    const re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
+  import data from './assets/roomdata.js';
+  import Discount from './components/Discount.vue';
+  import Modal from './components/Modal.vue';
+  import Card from './components/Card.vue';
 
   export default {
     components: {
-      ToastPopup
+      Discount,
+      Modal,
+      Card
     },
+    name: 'App',
     data() {
       return {
-        username: '',
-        password: '',
-        isError: false,
-        isSuccess: false
-      }
-    },
-    computed: {
-      isUsernameValid() {
-        if (validateEmail(this.username)) {
-          this.isError = false;
-          return true;
-        } else {
-          this.isError = true;
-          return false;
-        }
-        // return validateEmail(this.username);
+        rooms: data,
+        menus: ['Home', 'Shop', 'Products', 'About'],
+        isModalOpen: false,
+        roomNo: 0,
+        counts:[0,0,0,0,0,0]
       }
     },
     methods: {
-      submitForm() {
-        // submitForm(event) {
-        // event.preventDefault();
-        console.log('로그인');
-        // axios
-        //   .post()
-        //   .then()
-        //   .catch(error => {
-        //     this.isError = true;
-        //   });
-
-        this.isError = false;
-        this.initForm();
+      countsUp(num){
+        this.$set(this.counts, num, this.counts[num] + 1);
       },
-      initForm() {
-        this.username = '';
-        this.password = '';
-        this.isSuccess = true;
+      modalClose(isModalOpen) {
+        this.isModalOpen = isModalOpen;
+      },
+      modalOpen(isModalOpen, roomNo) {
+        this.isModalOpen = isModalOpen;
+        this.roomNo = roomNo;
       }
     }
   }
 </script>
 
 <style>
-  .username-input.error {
-    border: 1px solid red;
+  body {
+    margin: 0;
+  }
+
+  div {
+    box-sizing: border-box;
+  }
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  .img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid blue;
+  }
+
+  .menu {
+    background: darkslateblue;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .menu a {
+    color: white;
+    padding: 10px;
+  }
+
+  .h1 {
+    color: blue;
+    font-family: 맑은 고딕, 궁서체, 바탕체;
   }
 </style>
