@@ -8,26 +8,46 @@
     </ul>
     <img src="./assets/logo.png" class="logo" />
   </div>
-
-  <Container />
+  <Container :postdata="postdata" />
+  <button @click="more">더보기</button>
 
   <div class="footer">
     <ul class="footer-button-plus">
       <input type="file" id="file" class="inputfile" />
       <label for="file" class="input-plus">+</label>
     </ul>
- </div>
+  </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-
+import Container from "./components/Container";
+import postdata from "./assets/postdata";
+const axios = require('axios');
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      postdata: postdata,
+    };
+  },
   components: {
+    Container,
     //HelloWorld
+  },
+  methods:{
+    more(){
+      axios.get('https://raw.githubusercontent.com/ai-edu-pro/busan/main/more1.json')
+      //.then(function(result){
+      .then((result)=>{
+        console.log(result.data);
+        this.postdata.push(result.data)
+        //정상처리되면 처리할 내용
+      })
+      
+    }
   }
-}
+};
 </script>
 
 <style>
