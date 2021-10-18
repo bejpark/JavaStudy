@@ -26,16 +26,22 @@
       </div>
     </nav>
     <button type="button" class="btn btn-success">Success</button>
-    <Home/>
- 
-  <!-- <router-view :blog="blog"></router-view> -->
-    <List :blog="blog"/>
+    <!-- <Home/> -->
+    <br>
+    <router-link to="/">HomePage</router-link>
+    <br>
+    <router-link to="/list">List Page</router-link>
+ <!-- 라우터로 설정한 컴포넌트를 보여줄 자리 -->
+  <div class="mt-4">
+    <router-view :blog="blog"></router-view>
+  </div>
+    <!-- <List :blog="blog"/> -->
 
 </template>
 
 <script>
-import List from './components/List.vue'
-import Home from './components/Home.vue'
+// import List from './components/List.vue'
+// import Home from './components/Home.vue'
 import blog from './assets/blog'
 
 export default {
@@ -46,8 +52,8 @@ export default {
     }
   },
   components:{
-    List,
-    Home,
+    //List,
+    //Home,
   }
 }
 </script>
