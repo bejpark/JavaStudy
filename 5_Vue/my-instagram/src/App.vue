@@ -4,12 +4,13 @@
       <li>Cancel</li>
     </ul>
     <ul class="header-button-right">
-      <li @click="step++">Next</li>
+      <li v-if="step==1" @click="step++">Next</li>
+      <li v-if="step==2" @click="publish" >Upload</li>
     </ul>
     <img src="./assets/logo.png" class="logo" />
   </div>
   <Container @mywrite="mywrite=$event" :postdata="postdata" :step="step" :myimage="myimage"/>
-  <button @click="more">더보기</button>
+  <button v-if="step==0" @click="more">더보기</button>
  <!-- @이벤트명="mywrite= $event" -->
   <div class="footer">
     <ul class="footer-button-plus">
@@ -17,13 +18,13 @@
       <label for="file" class="input-plus">+</label>
     </ul>
   </div>
-  <div v-if="step == 0">content0</div>
+  <!-- <div v-if="step == 0">content0</div>
   <div v-if="step == 1">content1</div>
   <div v-if="step == 2">content2</div>
   <button @click="step = 0">button0</button>
   <button @click="step = 1">button1</button>
   <button @click="step = 2">button2</button>
-  <div style="margin-top:500px;"></div>
+  <div style="margin-top:500px;"></div> -->
 </template>
 
 <script>
@@ -59,6 +60,8 @@ export default {
         content: this.mywrite,//내가쓴글
         filter: "perpetua",
       }
+      this.postdata.unshift(myboard);
+      this.step=0;
     },
     upload(e){
       let file=e.target.files;

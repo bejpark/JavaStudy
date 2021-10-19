@@ -7,32 +7,42 @@
   <div v-if="step == 1">
     <div class="upload-image" :style="`background-image:url(${myimage})`"></div>
     <div class="filters">
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
-      <div class="filter-1"></div>
+      <FilterBox v-for="f in filters" :key="f" :filters="filters[i]" :myimage="myimage">
+        <span>{{f}}</span>
+        <template v-slot:x>데이러x</template>
+        <template v-slot:y>데이러y</template>
+
+        </FilterBox>
     </div>
   </div>
 
   <div v-if="step == 2">
-    <div class="upload-image" :style="`background-image:url(${myimage})`">
-      <textarea class="write-box"></textarea>
+    <div class="upload-image" :style="`background-image:url(${myimage})`"></div>
+    <div class="write">
+    <textarea @input="$emit('mywrite', $event.target.value)" class="write-box">글쓰는곳</textarea>
     </div>
   </div>
 </template>
 
 <script>
 import Post from "./Post";
+import FilterBox from "./FilterBox";
 export default {
   name: "Container",
+  data(){
+    return{
+      filters:[ "aden", "_1977", "brannan", "brooklyn", "clarendon", "earlybird", "gingham", "hudson",
+                "inkwell", "kelvin", "lark", "lofi", "maven", "mayfair", "moon", "nashville", "perpetua",
+                "reyes", "rise", "slumber", "stinson", "toaster", "valencia", "walden", "willow", "xpro2"]
+    }
+  },
   props: {
     postdata: Array,
     step: Number,
     myimage: String,
   },
   components: {
-    Post,
+    Post,FilterBox,
   },
 };
 </script>
