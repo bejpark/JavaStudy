@@ -5,19 +5,22 @@
 
   <!-- 필터선택페이지 -->
   <div v-if="step == 1">
-    <div class="upload-image" :style="`background-image:url(${myimage})`"></div>
+    <div :class="choicefilter" class="upload-image" :style="`background-image:url(${myimage})`"></div>
     <div class="filters">
-      <FilterBox v-for="f in filters" :key="f" :filters="filters[i]" :myimage="myimage">
-        <span>{{f}}</span>
-        <template v-slot:x>데이러x</template>
-        <template v-slot:y>데이러y</template>
+      <FilterBox v-for="f in filters" :key="f" :filter="f" :myimage="myimage">
+        <span class="filtername">{{f}}</span>
+        <!-- <template v-slot:x>데이러x</template>
+        <template v-slot:y>데이러y</template> -->
+
+        <!-- 부모는 {{자식데이터}} 형식으로 사용 -->
+        <!-- <template v-slot:default="Naming">{{Naming.msg}}</template> -->
 
         </FilterBox>
     </div>
   </div>
 
   <div v-if="step == 2">
-    <div class="upload-image" :style="`background-image:url(${myimage})`"></div>
+    <div :class="choicefilter" class="upload-image" :style="`background-image:url(${myimage})`"></div>
     <div class="write">
     <textarea @input="$emit('mywrite', $event.target.value)" class="write-box">글쓰는곳</textarea>
     </div>
@@ -40,6 +43,7 @@ export default {
     postdata: Array,
     step: Number,
     myimage: String,
+    choicefilter:String,
   },
   components: {
     Post,FilterBox,
@@ -48,6 +52,11 @@ export default {
 </script>
 
 <style>
+.filtername{
+  padding: 2px;
+  background-color: #000;
+  font-weight: bold;
+}
 .upload-image {
   width: 100%;
   height: 450px;

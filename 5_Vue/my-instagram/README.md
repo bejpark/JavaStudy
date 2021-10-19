@@ -1,5 +1,5 @@
 # my-instagram
-
+Vue version 3
 ## Project setup
 ```
 npm install

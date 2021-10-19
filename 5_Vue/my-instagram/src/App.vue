@@ -9,7 +9,7 @@
     </ul>
     <img src="./assets/logo.png" class="logo" />
   </div>
-  <Container @mywrite="mywrite=$event" :postdata="postdata" :step="step" :myimage="myimage"/>
+  <Container @mywrite="mywrite=$event" :choicefilter="choicefilter" :postdata="postdata" :step="step" :myimage="myimage"/>
   <button v-if="step==0" @click="more">더보기</button>
  <!-- @이벤트명="mywrite= $event" -->
   <div class="footer">
@@ -42,11 +42,18 @@ export default {
       step: 0,
       myimage:'',
       mywrite:'',
+      choicefilter:'',
     };
   },
   components: {
     Container,
     //HelloWorld
+  },
+  mounted(){ //filter에서 보낸 name에서 받아옴
+    this.emitter.on('boxclick',(a)=>{
+      this.choicefilter=a;
+    });
+
   },
   methods: {
     publish(){
@@ -58,7 +65,7 @@ export default {
         date: "May 15",
         liked: false,
         content: this.mywrite,//내가쓴글
-        filter: "perpetua",
+        filter: this.choicefilter,
       }
       this.postdata.unshift(myboard);
       this.step=0;
