@@ -6,7 +6,9 @@ const store = createStore({
         return {
             name: 'doyeon',
             age: '20',
-            likes: [0, 0, 0]
+            likes: [0, 0, 0],
+            likess: 0,
+            isLike: false,
         }
     },
 
@@ -23,9 +25,17 @@ const store = createStore({
             } else {
                 state.likes[idx]--;
             }
-
-
+        },
+        like(state) {
+            if (state.isLike == false) {
+                state.likess++;
+                state.isLike = true;
+            } else {
+                state.likess--;
+                state.isLike = false;
+            }
         }
+
 
     }
 })

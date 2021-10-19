@@ -14,6 +14,9 @@
         {{ postdata.likes + $store.state.likes[index] }} likes
         <span :class="likedclass" @click="likeClick">like!</span>
       </p>
+      <!-- <p @click="$store.commit('like')">
+        {{postdata.likes+$store.state.likess}} Likes
+      </p> -->
       <p>
         <strong>{{ postdata.name }}</strong> {{ postdata.content }}
       </p>
