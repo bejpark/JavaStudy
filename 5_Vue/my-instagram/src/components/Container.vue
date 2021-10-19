@@ -5,7 +5,7 @@
 
   <!-- 필터선택페이지 -->
   <div v-if="step == 1">
-    <div class="upload-image"></div>
+    <div class="upload-image" :style="`background-image:url(${myimage})`"></div>
     <div class="filters">
       <div class="filter-1"></div>
       <div class="filter-1"></div>
@@ -16,7 +16,7 @@
   </div>
 
   <div v-if="step == 2">
-    <div class="upload-image" style="background-image:url(${myimage})">
+    <div class="upload-image" :style="`background-image:url(${myimage})`">
       <textarea class="write-box"></textarea>
     </div>
   </div>

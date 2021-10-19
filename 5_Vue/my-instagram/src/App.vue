@@ -4,16 +4,16 @@
       <li>Cancel</li>
     </ul>
     <ul class="header-button-right">
-      <li>Next</li>
+      <li @click="step++">Next</li>
     </ul>
     <img src="./assets/logo.png" class="logo" />
   </div>
-  <Container :postdata="postdata" :step="step" :myimage="myimage"/>
+  <Container @mywrite="mywrite=$event" :postdata="postdata" :step="step" :myimage="myimage"/>
   <button @click="more">더보기</button>
-
+ <!-- @이벤트명="mywrite= $event" -->
   <div class="footer">
     <ul class="footer-button-plus">
-      <input type="file" id="file" class="inputfile" />
+      <input @change="upload" multiplc accept="image/*" type="file" id="file" class="inputfile" />
       <label for="file" class="input-plus">+</label>
     </ul>
   </div>
@@ -40,6 +40,7 @@ export default {
       morecount: 0,
       step: 0,
       myimage:'',
+      mywrite:'',
     };
   },
   components: {
@@ -47,9 +48,25 @@ export default {
     //HelloWorld
   },
   methods: {
-    step1() {
+    publish(){
+      var myboard={
+        name: "Kim Hyun",
+        userImage: "https://placeimg.com/100/100/arch",
+        postImage: this.myimage,
+        likes: 36,
+        date: "May 15",
+        liked: false,
+        content: this.mywrite,//내가쓴글
+        filter: "perpetua",
+      }
+    },
+    upload(e){
+      let file=e.target.files;
+      //console.log(file[0]);
       this.step++;
-      console.log("click");
+      let url=URL.createObjectURL(file[0]);
+      console.log(url);
+      this.myimage=url;
     },
     more() {
       axios
