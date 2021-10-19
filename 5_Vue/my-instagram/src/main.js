@@ -1,9 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import mitt from 'mitt'
-
+import { createApp } from "vue";
+import App from "./App.vue";
+import mitt from "mitt";
+//import axios from "axios";
+import store from './assets/store';
 let emitter = mitt();
-let app = createApp(App)
-app.config.globalProperties.emitter = emitter
+let app = createApp(App);
+app.config.globalProperties.emitter = emitter;
+//app.config.globalProperties.axios = axios;
 
-app.mount('#app')
+app.use(store).mount("#app");

@@ -4,17 +4,41 @@
       <li>Cancel</li>
     </ul>
     <ul class="header-button-right">
-      <li v-if="step==1" @click="step++">Next</li>
-      <li v-if="step==2" @click="publish" >Upload</li>
+      <li v-if="step == 1" @click="step++">Next</li>
+      <li v-if="step == 2" @click="publish">Upload</li>
     </ul>
     <img src="./assets/logo.png" class="logo" />
   </div>
-  <Container @mywrite="mywrite=$event" :choicefilter="choicefilter" :postdata="postdata" :step="step" :myimage="myimage"/>
-  <button v-if="step==0" @click="more">더보기</button>
- <!-- @이벤트명="mywrite= $event" -->
+
+  <h4>방갑다 {{ $store.state.name }}</h4>
+  <h3>나이 : {{ $store.state.age }}</h3>
+  <button @click="$store.commit('namechange')">이름변경</button>
+  <button @click="$store.commit('ageup')">나이증가</button>
+
+  <!-- <button @click="$store.state.name='박병제'">이름변경</button> -->
+  <!-- 기능은 되지만 이런식으로 하면안됨 -->
+
+  <Container
+    @mywrite="mywrite = $event"
+    :choicefilter="choicefilter"
+    :postdata="postdata"
+    :step="step"
+    :myimage="myimage"
+  />
+
+  <button v-if="step == 0" @click="more">더보기</button>
+
+  <!-- @이벤트명="mywrite= $event" -->
   <div class="footer">
     <ul class="footer-button-plus">
-      <input @change="upload" multiplc accept="image/*" type="file" id="file" class="inputfile" />
+      <input
+        @change="upload"
+        multiplc
+        accept="image/*"
+        type="file"
+        id="file"
+        class="inputfile"
+      />
       <label for="file" class="input-plus">+</label>
     </ul>
   </div>
@@ -40,43 +64,43 @@ export default {
       postdata: postdata,
       morecount: 0,
       step: 0,
-      myimage:'',
-      mywrite:'',
-      choicefilter:'',
+      myimage: "",
+      mywrite: "",
+      choicefilter: "",
     };
   },
   components: {
     Container,
     //HelloWorld
   },
-  mounted(){ //filter에서 보낸 name에서 받아옴
-    this.emitter.on('boxclick',(a)=>{
-      this.choicefilter=a;
+  mounted() {
+    //filter에서 보낸 name에서 받아옴
+    this.emitter.on("boxclick", (a) => {
+      this.choicefilter = a;
     });
-
   },
   methods: {
-    publish(){
-      var myboard={
+    publish() {
+      var myboard = {
         name: "Kim Hyun",
         userImage: "https://placeimg.com/100/100/arch",
         postImage: this.myimage,
         likes: 36,
         date: "May 15",
         liked: false,
-        content: this.mywrite,//내가쓴글
+        content: this.mywrite, //내가쓴글
         filter: this.choicefilter,
-      }
+      };
       this.postdata.unshift(myboard);
-      this.step=0;
+      this.step = 0;
     },
-    upload(e){
-      let file=e.target.files;
+    upload(e) {
+      let file = e.target.files;
       //console.log(file[0]);
       this.step++;
-      let url=URL.createObjectURL(file[0]);
+      let url = URL.createObjectURL(file[0]);
       console.log(url);
-      this.myimage=url;
+      this.myimage = url;
     },
     more() {
       axios

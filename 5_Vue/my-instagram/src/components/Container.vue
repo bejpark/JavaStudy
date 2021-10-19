@@ -1,6 +1,6 @@
 <template>
   <div v-if="step == 0">
-    <Post :postdata="postdata[i]" v-for="(p, i) in postdata" :key="i" />
+    <Post :index="i" :postdata="postdata[i]" v-for="(p, i) in postdata" :key="i" />
   </div>
 
   <!-- 필터선택페이지 -->
