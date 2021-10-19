@@ -8,7 +8,7 @@
     </ul>
     <img src="./assets/logo.png" class="logo" />
   </div>
-  <Container :postdata="postdata" />
+  <Container :postdata="postdata" :step="step" :myimage="myimage"/>
   <button @click="more">더보기</button>
 
   <div class="footer">
@@ -17,36 +17,57 @@
       <label for="file" class="input-plus">+</label>
     </ul>
   </div>
+  <div v-if="step == 0">content0</div>
+  <div v-if="step == 1">content1</div>
+  <div v-if="step == 2">content2</div>
+  <button @click="step = 0">button0</button>
+  <button @click="step = 1">button1</button>
+  <button @click="step = 2">button2</button>
+  <div style="margin-top:500px;"></div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import Container from "./components/Container";
 import postdata from "./assets/postdata";
-const axios = require('axios');
+const axios = require("axios");
+
 export default {
   name: "App",
   data() {
     return {
       postdata: postdata,
+      morecount: 0,
+      step: 0,
+      myimage:'',
     };
   },
   components: {
     Container,
     //HelloWorld
   },
-  methods:{
-    more(){
-      axios.get('https://raw.githubusercontent.com/ai-edu-pro/busan/main/more1.json')
-      //.then(function(result){
-      .then((result)=>{
-        console.log(result.data);
-        this.postdata.push(result.data)
-        //정상처리되면 처리할 내용
-      })
-      
-    }
-  }
+  methods: {
+    step1() {
+      this.step++;
+      console.log("click");
+    },
+    more() {
+      axios
+        .get(
+          `https://raw.githubusercontent.com/ai-edu-pro/busan/main/more${this.morecount}.json`
+        )
+        //.then(function(result){
+        .then((result) => {
+          this.morecount++;
+          if (this.morecount > 1) {
+            this.morecount = 0;
+          }
+          console.log(result.data);
+          this.postdata.push(result.data);
+          //정상처리되면 처리할 내용
+        });
+    },
+  },
 };
 </script>
 

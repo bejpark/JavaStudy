@@ -6,7 +6,7 @@
     </div>
     <div class="post-body" :style="{backgroundImage:`url(${postdata.postImage})`}"></div>
     <div class="post-content">
-      <p>{{postdata.likes}}</p>
+      <p>{{postdata.likes}} likes</p>
       <p><strong>{{postdata.name}}</strong> {{postdata.content}}</p>
       <p class="date">May 15</p>
     </div>
