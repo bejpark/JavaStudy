@@ -18,6 +18,10 @@
   <!-- <button @click="$store.state.name='박병제'">이름변경</button> -->
   <!-- 기능은 되지만 이런식으로 하면안됨 -->
 
+
+  <p>{{$store.state.more}}</p>
+  <button @click="$store.dispatch('getMore')">store더보기</button>
+
   <Container
     @mywrite="mywrite = $event"
     :choicefilter="choicefilter"
@@ -55,7 +59,9 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Container from "./components/Container";
 import postdata from "./assets/postdata";
-const axios = require("axios");
+import axios from 'axios';
+
+//const axios = require("axios");
 
 export default {
   name: "App",
