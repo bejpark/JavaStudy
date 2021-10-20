@@ -21,7 +21,11 @@
 
   <p>{{$store.state.more}}</p>
   <button @click="$store.dispatch('getMore')">store더보기</button>
-
+  <p>{{nowMet()}}{{count}}</p>
+  <p>{{nowCom}}{{count}}</p>
+  <button @click="count++">날씨</button>
+  <p>{{name}}</p>
+  <p>{{gender}}</p>
   <Container
     @mywrite="mywrite = $event"
     :choicefilter="choicefilter"
@@ -60,6 +64,7 @@
 import Container from "./components/Container";
 import postdata from "./assets/postdata";
 import axios from 'axios';
+import {mapState} from 'vuex';
 
 //const axios = require("axios");
 
@@ -73,6 +78,7 @@ export default {
       myimage: "",
       mywrite: "",
       choicefilter: "",
+      count:0,
     };
   },
   components: {
@@ -85,7 +91,21 @@ export default {
       this.choicefilter = a;
     });
   },
+  computed:{
+    nowCom(){
+      return new Date();
+    },
+    // name(){
+    //   return this.$store.state.name
+    // },
+    ...mapState(['name','age','likes','gender']),
+    ...mapState({namechange:'kim'})
+    //...mapState({naming:'name'})
+  },
   methods: {
+    nowMet(){
+      return new Date();
+    },
     publish() {
       var myboard = {
         name: "Kim Hyun",

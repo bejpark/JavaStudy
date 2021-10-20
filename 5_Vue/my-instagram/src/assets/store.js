@@ -11,6 +11,7 @@ const store = createStore({
             likess: 0,
             isLike: false,
             more: {},
+            gender: "f",
         };
     },
     actions: {
