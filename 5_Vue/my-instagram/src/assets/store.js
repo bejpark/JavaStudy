@@ -16,7 +16,7 @@ const store = createStore({
     },
     actions: {
         getMore(context) {
-            axios.get(`https://raw.githubusercontent.com/ai-edu-pro/busan/main/more0.json`)
+            axios.get(`http://localhost:8080/member/all`)
                 //.then(function(result){
                 .then(result => {
                     console.log(result.data);
