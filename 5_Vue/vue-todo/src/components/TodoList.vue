@@ -1,14 +1,12 @@
 <template>
   <section>
       <ul>
-          <li class="shadow" v-for="(todoItem,index) in todoItems" :key="todoItem">
+          <li class="shadow" v-for="(todoItem,index) in propsdata" :key="index">
             <i class="checkBtn fas fa-check" aria-hidden="true"></i>
             {{todoItem}}
             <span class="removeBtn" type="button" @click="removeTodo(todoItem,index)">
                 <i class="far fa-trash-alt" aria-hidden="true"></i>
-            </span>
-              
-
+            </span>   
           </li>
       </ul>
   </section>
@@ -16,23 +14,12 @@
 
 <script>
 export default {
-    data(){
-        return{
-            todoItems:[]
-        }
-    },
-    created(){
-        if (localStorage.length>0){
-            for(var i=0;i<localStorage.length;i++){
-                this.todoItems.push(localStorage.key(i));
-            }
-        }
-    },
+    props:['propsdata'],
     methods:{
         removeTodo(todoItem,index){
-            localStorage.removeItem(todoItem);
-            this.todoItems.splice(index,1);
-            console.log(todoItem,index);
+            this.$emit('removeTodo',todoItem,index)
+            //this.todoItems.splice(index,1);
+            //console.log(todoItem,index);
         }
     }
 
